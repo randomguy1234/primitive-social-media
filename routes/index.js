@@ -1,9 +1,10 @@
 const router= require('express').Router();
 const apiRoutes= require('./api');
-//unnsure to add html route
+const htmlRoutes= require('./html/html-routes');
 
 //use all routes
 router.use('/api', apiRoutes);
+router.use('/', htmlRoutes);
 
 //create error route
 router.use((req, res) => {
